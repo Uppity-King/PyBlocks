@@ -1,37 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>pyBlocks Editor Core</title>
+  <title>PyBlocks Editor</title>
   <script src="https://unpkg.com"></script>
   <script src="https://unpkg.com"></script>
-  <style>
-    body { margin: 0; padding: 0; overflow: hidden; background-color: #121214; font-family: sans-serif; }
-    .header { background: #1a1a1e; height: 60px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; box-sizing: border-box; border-bottom: 2px solid #252529; }
-    .main-container { display: flex; width: 100vw; height: calc(100vh - 60px); }
-    #blocklyWorkspaceContainer { width: 65%; height: 100%; }
-    .output-sidebar { width: 35%; height: 100%; background: #1e1e1e; border-left: 2px solid #252529; box-sizing: border-box; display: flex; flex-direction: column; padding: 15px; }
-    .panel-title { color: #ffffff; font-size: 14px; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-    button { background: #00b4d8; color: #fff; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #0096c7; }
-    textarea { width: 100%; flex: 1; background: #000000; color: #00ff00; font-family: monospace; border: 1px solid #333; pading: 10px; border-radius: 4px; box-sizing: border-box; resize: none; margin-top: 5px; }
-  </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; background-color: #121214; overflow: hidden;">
 
-  <div class="header">
-    <span style="color: #ffffff; font-size: 20px; font-weight: bold; letter-spacing: 1px;">pyBlocks Workspace</span>
-    <button onclick="compileCode()">▶ Generate Python</button>
-  </div>
-
-  <div class="main-container">
-    <div id="blocklyWorkspaceContainer"></div>
-
-    <div class="output-sidebar">
-      <div class="panel-title">Python Code Output</div>
-      <textarea id="pythonOutputConsole" readonly placeholder="# Your compiled Python code will appear here..."></textarea>
-    </div>
-  </div>
+  <div id="blocklyWorkspaceContainer" style="width: 100vw; height: 100vh;"></div>
 
   <xml id="toolboxConfigurationTemplate" style="display: none">
     <category name="Logic" colour="210">
@@ -50,20 +27,13 @@
     const userWorkspaceGrid = Blockly.inject('blocklyWorkspaceContainer', {
       toolbox: document.getElementById('toolboxConfigurationTemplate'),
       grid: {
-        spacing: 25,
+        spacing: 20,
         length: 3,
         colour: '#333',
         snap: true
       },
-      trashcan: true,
-      zoom: { controls: true, wheel: true }
+      trashcan: true
     });
-
-    function compileCode() {
-      Blockly.Python.init(userWorkspaceGrid);
-      const generatedCode = Blockly.Python.workspaceToCode(userWorkspaceGrid);
-      document.getElementById('pythonOutputConsole').value = generatedCode || "# Connect blocks to see Python syntax!";
-    }
   </script>
 
 </body>
