@@ -1,40 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PyBlocks Editor</title>
-  <script src="https://unpkg.com"></script>
-  <script src="https://unpkg.com"></script>
-</head>
-<body style="margin: 0; padding: 0; background-color: #121214; overflow: hidden;">
-
-  <div id="blocklyWorkspaceContainer" style="width: 100vw; height: 100vh;"></div>
-
-  <xml id="toolboxConfigurationTemplate" style="display: none">
-    <category name="Logic" colour="210">
-      <block type="controls_if"></block>
-      <block type="logic_compare"></block>
-    </category>
-    <category name="Loops" colour="120">
-      <block type="controls_repeat_ext"></block>
-    </category>
-    <category name="Math" colour="230">
-      <block type="math_number"></block>
-    </category>
-  </xml>
-
-  <script>
-    const userWorkspaceGrid = Blockly.inject('blocklyWorkspaceContainer', {
-      toolbox: document.getElementById('toolboxConfigurationTemplate'),
-      grid: {
-        spacing: 20,
-        length: 3,
-        colour: '#333',
-        snap: true
-      },
-      trashcan: true
-    });
-  </script>
-
-</body>
-</html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyBlocks</title>
