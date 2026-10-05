@@ -18,6 +18,10 @@ h1 {
 }
 
 .btn {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   font-family: 'Asap', sans-serif;
   font-weight: 600;
