@@ -47,3 +47,8 @@ p {
   text-decoration: none;
   transition: background-colour 0.2s ease;
 }
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
