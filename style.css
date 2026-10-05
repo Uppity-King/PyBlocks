@@ -1,6 +1,12 @@
 @import url('https://googleapis.com');
 
 h1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  
   font-family: "Asap", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
