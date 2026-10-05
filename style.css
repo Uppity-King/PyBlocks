@@ -24,6 +24,13 @@ h2 {
   color: #2a7dc9;
 }
 
+p {
+  font-family: 'Asap';
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+}
+
 .btn {
   position: absolute;
   top: 50%;
