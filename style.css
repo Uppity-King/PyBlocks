@@ -60,3 +60,7 @@ a {
   font-weight: 700;
   font-size: clamp(1.1rem, 1.5vw + 0.5rem, 1.8rem);
 }
+
+a:hover {
+  background-color: #babbff;
+}
