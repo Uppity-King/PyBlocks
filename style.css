@@ -32,7 +32,10 @@ p {
 }
 
 .btn {
+  display: block;
   margin: 2rem 0;
+  width: max-content;
+  text-align: center;
   display: inline-block;
   font-family: 'Asap', sans-serif;
   font-weight: 700;
