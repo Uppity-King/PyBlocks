@@ -9,10 +9,10 @@ h1 {
   font-family: 'Asap';
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 40%;
   transform: translate(-50%, -50%);
   text-align: left;
-  text-wrap: 6rem;
+  max-width: 30rem;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   color: #2a7dc9;
