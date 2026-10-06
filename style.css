@@ -45,6 +45,10 @@ p {
   transition: background-color 0.2s ease;
 }
 
+.btn:hover {
+  background-color: #1e5c99;
+}
+
 a {
   font-family: 'Asap';
   color: #8ab1ff;
