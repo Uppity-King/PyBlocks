@@ -12,6 +12,7 @@ h1 {
   left: 10%;
   transform: translate(-50%, -50%);
   text-align: left;
+  word-wrap: 3rem;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   color: #2a7dc9;
