@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PyBlocks Editor</title>
-
+  <script src="https://unpkg.com/blockly"></script>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <a href="/pyblocks">Home</a>
+  <a href="/pyblocks">Home</a>
+  <div id="blocklyDiv" style="height: 400px; width: 600px;"></div>
+
+  <script>
+    Blockly.inject('blocklyDiv');
+  </script>
 </body>
