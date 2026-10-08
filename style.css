@@ -70,3 +70,8 @@ a:hover {
   display: inline-flex;
   gap: 1.5rem;
 }
+
+#blocklyDiv {
+  height: 480px;
+  width: 100%;
+}
