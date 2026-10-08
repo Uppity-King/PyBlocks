@@ -15,3 +15,10 @@ const workspace = Blockly.inject('blocklyDiv', {
   },
   trashcan: true
 });
+
+workspace.addChangeListener((e) => {
+  if (e.type == 'move' && !e.isUiChange && !e.reason) {
+    const b = workspace.getBlocklyById(e.blockId);
+    if (b && b.getRootBlock().type != 'program_start') b.dispose(false);
+  }
+});
